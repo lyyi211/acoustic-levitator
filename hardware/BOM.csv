@@ -1,0 +1,19 @@
+Reference,Component,Quantity,Key specifications,Part,Notes
+U1,Arduino Uno,1,ATmega328P; 16 MHz; 5 V,Arduino Uno R3,Timer1; D9 and D10 bank signals; D8 standby
+U2,Dual H-bridge breakout,1,TB6612FNG; 2 channels,TB6612FNG module,Dual bridge in the electrical design; capacitive-load model excludes switching and thermal losses
+U3,Hex Schmitt inverter,1,5 V logic; two gates used,74HC14,Two inverter gates; unused inputs connected to GND
+TX1-TX72,Desoldered HC-SR04 transmitter,72,40 kHz; approximate body diameter 16 mm; height 13 mm,HC-SR04 transmitter can,72 transmitting cans; one transmitter per donor module; receiver cans excluded; capacitance and continuous-drive rating not specified by module datasheet
+C1-C3,Ceramic capacitor 100 nF,3,X7R; >=25 V,Generic,At logic ICs and bridge VM
+C4,Bulk capacitor,1,470 uF; >=25 V; low ESR,Generic,At bridge VM
+R1,STBY pulldown,1,100 kOhm; 0.25 W,Generic,Hardware disabled state
+R2-R3,Bank series damping resistor,2,22 Ohm; >=3 W; noninductive,Generic,One per bank; nominal electrical model at 9 V
+F1,Inline fuse,1,1 A design value,Generic,VM input wiring protection
+J1,DC input connector,1,>=2 A; correct polarity,Screw terminal,9 V bridge input
+J2-J3,Bank connector,2,2-position; >=2 A,Screw terminal,Short twisted pair to each parallel bank
+PS1,Current-limited bench supply,1,9 V DC; current limit 1 A,Generic,Selected bridge supply; separate regulated 5 V logic
+MECH1,Printed concave cup,2,36 radial sockets; focus radius 90 mm,results/concave_cup.stl,Two identical cups facing inward
+MECH2,Printed connected support frame,1,220 x 158 mm base; four cup shelves,results/support_frame.stl,Continuous base and support posts
+MECH3,M4 bolts,4,M4 x 20 mm,Generic,6 mm tab; 5 mm shelf; washers and nut
+MECH4,M4 nuts,4,Lock nuts or standard nuts with locking method,Generic,One per mounting bolt
+MECH5,M4 washers,8,Flat washers,Generic,One on each side of bolted stack
+MECH6,Wire and prototyping board,1,Low-inductance bank wiring; silicone-compatible retention,Generic,Parallel banks and emitter retention

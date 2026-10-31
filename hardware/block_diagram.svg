@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
+<style>text{font-family:Arial,sans-serif;font-size:18px;fill:#19334c}.small{font-size:14px}.title{font-size:28px;font-weight:bold}.box{fill:#f2f6fa;stroke:#31536e;stroke-width:2}.wire{stroke:#277caf;stroke-width:3;fill:none}.power{stroke:#c7513b;stroke-width:3;fill:none}.sound{stroke:#6c95a8;stroke-width:2;stroke-dasharray:5 5;fill:none}</style>
+<rect width="1280" height="720" fill="white"/>
+<text x="35" y="45" class="title">Concave acoustic levitator · 36 + 36</text>
+<text x="35" y="78">Geometric focusing at one common centre · 40 kHz · two coherent banks</text>
+<rect class="box" x="35" y="215" width="225" height="230" rx="12"/>
+<text x="58" y="252">Arduino Uno</text>
+<text class="small" x="58" y="290">D9 / OC1A: upper bank</text>
+<text class="small" x="58" y="322">D10 / OC1B: lower bank</text>
+<text class="small" x="58" y="355">D8: bridge STBY</text>
+<text class="small" x="58" y="388">0° / 180° bank phase</text>
+<text class="small" x="58" y="419">E 1 enables; reset disables</text>
+<rect class="box" x="335" y="305" width="190" height="130" rx="12"/>
+<text x="395" y="345">74HC14</text>
+<text class="small" x="353" y="378">Two complementary outputs</text>
+<text class="small" x="353" y="407">Unused inputs defined</text>
+<rect class="box" x="600" y="235" width="230" height="245" rx="12"/>
+<text x="642" y="273">TB6612FNG</text>
+<text class="small" x="620" y="314">AIN1/BIN1: direct D9/D10</text>
+<text class="small" x="620" y="350">AIN2/BIN2: inverted D9/D10</text>
+<text class="small" x="620" y="386">PWMA / PWMB: 5 V</text>
+<text class="small" x="620" y="422">STBY: 100 kΩ pull-down</text>
+<text class="small" x="620" y="458">Two differential outputs</text>
+<path class="wire" d="M260 287 H300 V200 H575 V314 H600 M300 287 V370 H335 M525 370 H563 V350 H600"/>
+<circle cx="300" cy="287" r="4" fill="#277caf"/>
+<text class="small" x="332" y="190">D9/D10 direct (2 signals)</text>
+<path class="wire" d="M260 355 H281 V508 H577 V422 H600"/>
+<text class="small" x="331" y="534">D8 standby enable</text>
+<path class="power" d="M715 175 V235"/>
+<text x="570" y="115">VM: fused 9 V</text>
+<text class="small" x="570" y="145">Supply current limit: 1 A</text>
+<text class="small" x="570" y="173">Ideal bridge output: 18 Vpp</text>
+<rect class="box" x="1000" y="155" width="245" height="125" rx="12"/>
+<text x="1022" y="194">Upper concave cup</text>
+<text class="small" x="1020" y="225">TX1–TX36, wired in parallel</text>
+<text class="small" x="1020" y="253">Model load: 72 nF</text>
+<rect class="box" x="1000" y="470" width="245" height="125" rx="12"/>
+<text x="1022" y="509">Lower concave cup</text>
+<text class="small" x="1020" y="540">TX37–TX72, wired in parallel</text>
+<text class="small" x="1020" y="568">Model load: 72 nF</text>
+<path class="wire" d="M830 314 H855 V217 H884 l8 -7 8 14 8 -14 8 14 8 -7 H1000 M830 342 H967 V249 H1000"/>
+<path class="wire" d="M830 386 H855 V532 H884 l8 -7 8 14 8 -14 8 14 8 -7 H1000 M830 416 H967 V563 H1000"/>
+<text class="small" x="853" y="197">R2: 22 Ω, ≥3 W</text>
+<text class="small" x="853" y="512">R3: 22 Ω, ≥3 W</text>
+<path class="sound" d="M1030 280 Q1045 340 1122 375 M1215 280 Q1200 340 1122 375 M1030 470 Q1045 415 1122 375 M1215 470 Q1200 415 1122 375"/>
+<circle cx="1122" cy="375" r="7" fill="#d89435"/>
+<text class="small" x="1027" y="411">Common focus · radius 90 mm</text>
+<text x="35" y="594">5 V logic · common return near bridge</text>
+<text class="small" x="35" y="622">100 nF at each IC / bridge rail; ≥470 µF bulk at VM</text>
+<text class="small" x="35" y="650">Two bolted cups supported by four shelves on one connected frame</text>
+<text class="small" x="35" y="691">Connectivity overview, not a finished PCB. Acoustic pressure is assumed in simulation, not calibrated from voltage.</text>
+</svg>

@@ -1,0 +1,21 @@
+{
+  "scan_half_width_m": 0.06199999999999999,
+  "scan_grid_m": 0.0001,
+  "refined_grid_m": 5e-05,
+  "derivative_step_m": 2e-05,
+  "refined_derivative_step_m": 1e-05,
+  "axially_stable_count": 18,
+  "locally_stable_3d_count": 15,
+  "particle_mass_kg": 3.3929200658769753e-09,
+  "particle_weight_N": 3.327317956403244e-08,
+  "effective_weight_N": 3.193770504693072e-08,
+  "independent_particle_total_mass_kg": 5.0893800988154626e-08,
+  "rayleigh_radius_limit_m": 0.0004096648235185386,
+  "rayleigh_mass_limit_kg": 8.639644777513912e-09,
+  "plane_wave_pressure_threshold_pa": 301.19673869867677,
+  "plane_wave_lattice_count_max": 29,
+  "sampled_peak_upward_force_N": 6.166187094336759e-07,
+  "force_equivalent_supported_mass_kg": 6.30137900252153e-08,
+  "simultaneous_occupancy_validated": false,
+  "count_scope": "Single-particle on-axis equilibria in the stated central slab; no multiple scattering"
+}

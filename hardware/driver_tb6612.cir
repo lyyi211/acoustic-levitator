@@ -1,0 +1,32 @@
+* Concave-array bank: ideal bridge plus damping and static capacitance
+* This is NOT a transistor-level TB6612FNG model.
+.include hardware/generated_driver_params.inc
+.param PERIOD={1/FREQ} TR=100n
+VPA pa 0 PULSE(0 {VM} 0 {TR} {TR} {PERIOD/2-TR} {PERIOD})
+VPB pb 0 PULSE({VM} 0 0 {TR} {TR} {PERIOD/2-TR} {PERIOD})
+RDRV1 pa outp {RBRIDGE/2}
+RDRV2 pb outn {RBRIDGE/2}
+RDAMP outp x {RDAMP}
+* Zero-volt source measures bank current without changing the load.
+VSENSE x cap 0
+CLOAD cap outn {CBANK*LOAD_SCALE}
+.tran 0.05u 150u 0 0.05u
+.control
+run
+let vdiff = v(outp) - v(outn)
+let vbank = v(cap) - v(outn)
+let absload = abs(i(VSENSE))
+let pdamp = i(VSENSE) * (v(outp) - v(x))
+meas tran vdiff_pp PP vdiff FROM=50u TO=150u
+meas tran vbank_pp PP vbank FROM=50u TO=150u
+meas tran irms RMS i(VSENSE) FROM=50u TO=150u
+meas tran ipeak MAX absload FROM=50u TO=150u
+meas tran resistor_power AVG pdamp FROM=50u TO=150u
+print vdiff_pp vbank_pp irms ipeak resistor_power
+set wr_singlescale
+set wr_vecnames
+wrdata results/driver_waveforms.csv vdiff vbank i(VSENSE) pdamp
+quit
+.endc
+.end
+

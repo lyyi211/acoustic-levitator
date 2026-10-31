@@ -1,0 +1,90 @@
+[
+  {
+    "file": "results/concave_cup.stl",
+    "triangles": 28212,
+    "vertices": 14030,
+    "watertight": true,
+    "consistent_winding": true,
+    "connected_components": 1,
+    "volume_mm3": 172162.94202149578,
+    "euler_characteristic": -76,
+    "bounds_mm": [
+      [
+        -98.0,
+        -71.0,
+        -7.57949e-07
+      ],
+      [
+        98.0,
+        71.0,
+        41.6302
+      ]
+    ]
+  },
+  {
+    "file": "results/support_frame.stl",
+    "triangles": 892,
+    "vertices": 440,
+    "watertight": true,
+    "consistent_winding": true,
+    "connected_components": 1,
+    "volume_mm3": 364990.91830487194,
+    "euler_characteristic": -6,
+    "bounds_mm": [
+      [
+        -110.0,
+        -79.0,
+        0.0
+      ],
+      [
+        110.0,
+        79.0,
+        186.277
+      ]
+    ]
+  },
+  {
+    "file": "results/socket_fit_coupon.stl",
+    "triangles": 400,
+    "vertices": 200,
+    "watertight": true,
+    "consistent_winding": true,
+    "connected_components": 1,
+    "volume_mm3": 5845.319978874079,
+    "euler_characteristic": 0,
+    "bounds_mm": [
+      [
+        -12.0,
+        -12.0,
+        0.0
+      ],
+      [
+        12.0,
+        12.0,
+        15.0
+      ]
+    ]
+  },
+  {
+    "file": "results/levitator_frame.stl",
+    "triangles": 56540,
+    "vertices": 28112,
+    "watertight": true,
+    "consistent_winding": true,
+    "connected_components": 1,
+    "volume_mm3": 709317.2293231221,
+    "euler_characteristic": -158,
+    "bounds_mm": [
+      [
+        -110.0,
+        -79.0,
+        -117.0
+      ],
+      [
+        110.0,
+        79.0,
+        104.907
+      ]
+    ]
+  }
+]
